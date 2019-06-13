@@ -1,0 +1,47 @@
+openapi: 3.0.2
+info:
+  title: Book API
+  version: 1.0.0
+paths:
+  /books:
+    get:
+      description: Get all books
+      operationId: getBooks
+      responses:
+        '200':
+          $ref: '#/components/responses/Books'
+components:
+  schemas:
+    Book:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: にのめちゃんファンブック
+        published_at:
+          type: string
+          format: date
+          example: '2015-05-05'
+      required:
+        - id
+        - title
+        - published_at
+    Books:
+      type: object
+      properties:
+        books:
+          type: array
+          items:
+            $ref: '#/components/schemas/Book'
+      required:
+        - books
+  responses:
+    Books:
+      description: Array of books
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Books'
