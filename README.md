@@ -3,7 +3,8 @@
 OpenAPIとTypeScriptを使って構築したサンプルWebアプリケーションです。
 
 詳しくは以下のブログ記事を参照してください。
-_TODO: ブログ記事のURLを貼る_
+
+https://blog.5thfloor.co.jp/2019/06/26/webapp-development-with-openapi-and-typescript/
 
 ## 構成
 
